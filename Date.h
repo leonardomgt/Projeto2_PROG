@@ -18,7 +18,7 @@ public:
 	unsigned int getMinute(unsigned int m);
 	unsigned int getSecond(unsigned int s);
 	unsigned int getDate(unsigned int day, unsigned int month, unsigned int year, unsigned int hour, unsigned int min, unsigned int sec);
-	~Date()
+	~Date();
 
 private:
 	unsigned int day; 
