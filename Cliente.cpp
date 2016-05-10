@@ -73,6 +73,3 @@ bool operator<(const Cliente &cliente1, const Cliente &cliente2){
     }
     
 }
-
-//jfidoafhbrisofdhboi
-//NAVDSUIVHJBAKDZX
