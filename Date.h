@@ -8,6 +8,7 @@
 
 using namespace std;
 
+
 class Data {
  private:
     int dia;
@@ -32,4 +33,5 @@ class Data {
     void save(ofstream &out) const;
     friend bool operator>=(const Data &date1, const Data date2);
     friend ostream& operator<<(ostream& out, const Data & data);
+    string mostrarData() const;
 };
