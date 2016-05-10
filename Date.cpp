@@ -53,15 +53,17 @@ int Data::getAno() const{
 }
 
 void Data::setDia(int dia){
-  // A IMPLEMENTAR
+  
+    this->dia = dia;
+    
 }
 
 void Data::setMes(int mes){
-  // A IMPLEMENTAR
+    this->mes = mes;
 }
 
 void Data::setAno(int ano){
-  // A IMPLEMENTAR
+    this->ano = ano;
 }
 
 bool Data::isLeap() const {
@@ -179,8 +181,10 @@ bool operator>=(const Data &date1, const Data date2) {
 }
 
 
-void Data::save(ofstream & out) const{
-  // A IMPLEMENTAR
+void Data::save(ofstream &out) const{
+  
+    out << this;
+    
 }
 
 bool Data::getValid() const {
@@ -204,3 +208,45 @@ ostream& operator<<(ostream& out, const Data &data){
     return out;
 }
 
+string Data::mostrarData() const {
+    
+    string finalDate = "";
+    
+    if (this->dia < 10) {
+        
+        finalDate += '0';
+        finalDate.append(to_string(this->dia));
+    }
+    
+    else {
+        
+        finalDate.append(to_string(this->dia));
+    }
+    
+    finalDate += '/';
+    
+    if (this->mes < 10) {
+        
+        finalDate += '0';
+        finalDate.append(to_string(this->mes));
+        
+    } else {
+        
+        finalDate.append(to_string(this->mes));
+        
+    }
+    
+    finalDate += '/';
+    
+    if (this->ano == 0) {
+        
+        finalDate.append("0000");
+        
+    } else {
+        
+        finalDate.append(to_string(this->ano));
+    }
+    
+    return finalDate;
+    
+}
