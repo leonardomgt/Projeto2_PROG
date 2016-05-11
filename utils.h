@@ -14,3 +14,5 @@ unsigned short int leUnsignedShortInt(unsigned short int min, unsigned short int
 int leInteiro(int min, int max);
 
 void trimString(string &inputString);
+
+void getDate(int &day, int &month, int &year);
