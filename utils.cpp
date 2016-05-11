@@ -81,3 +81,13 @@ void trimString(string &inputString) {
         }
     }
 }
+
+void getDate(int &day, int &month, int &year){
+	time_t rawtime;
+	struct tm timeinfo;
+	time(&rawtime);
+	localtime_s(&timeinfo, &rawtime);
+	day = timeinfo.tm_mday;
+	month = timeinfo.tm_mon + 1;
+	year = timeinfo.tm_year + 1900;
+}
